@@ -1,0 +1,14 @@
+{
+    "name": "pythonista-dark",
+    "title": "Pythonista Dark",
+    "description": "A dark theme using Python's yellow and blue",
+    "homepage": "https://github.com/wendrom/pythonista-dark",
+    "version": "1.0.0",
+    "author": "Wendrom",
+    "license": "MIT",
+    "theme": {
+        "file": "theme.less",
+        "dark": true
+    },
+    "keywords": ["theme", "dark"]
+}
