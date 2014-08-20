@@ -1,0 +1,125 @@
+/* Define some variables used in multiple places */
+@background: #0A080A;
+@foreground: #fff;
+
+@operator: #ffff40;
+@function: #ddee55;
+@keyword: #f8cf48;
+
+@variable: #4088ff;
+@value: #20aadd;
+
+/*
+@operator: #ff4040;
+@function: #ff7666;
+
+@variable: #40AAff;
+@value: #20CCDD;
+*/
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+  background-color: @background;
+  color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+  background: #3C3F41;
+  color: #d9d9d9;
+}
+&.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+
+.CodeMirror-focused .CodeMirror-activeline {
+  .CodeMirror-gutter-elt {
+    background-color: #3C3F41;
+    color: #d9d9d9;
+  }
+  .inline-widget .CodeMirror-gutter-elt {
+    background-color: #3C3F41;
+    color: #d9d9d9;
+  }
+}
+
+.cm-operator, .cm-qualifier {color: @operator;}
+.cm-keyword {color: @keyword}
+.cm-tag  {color: @function !important;}
+.cm-atom, .cm-number, .cm-variable-2 {color: @value;}
+.cm-def {color: lighten(@function, 20%);}
+.cm-variable {color: #eee;}
+.cm-property, .cm-attribute {color: @variable;}
+.cm-comment {color: #606060;}
+.cm-string, .cm-string-2 {color: lighten(@value, 30%);}
+.cm-meta, .cm-builtin {color: darken(@operator, 12%);}
+.cm-bracket {color: #eee;}
+.cm-matchhighlight {background-color: rgba(61,61,61,.23);}
+
+.cm-plus {color: #85a300;}
+.cm-variable-3 {color: @foreground;}
+.cm-error, .cm-minus {color: #dc322f;}
+.cm-header {color: @function;}
+.cm-link {
+    color: #ffb020;
+    text-decoration: none;
+    &:hover {
+        border-bottom: solid 1px;
+    }
+}
+.cm-rangeinfo {color: #6c71c4;}
+.cm-quote {color: #6c9ef8;}
+
+/* Extra CSS */
+
+.CodeMirror.find-highlighting div.CodeMirror-selected,
+.CodeMirror .CodeMirror.find-highlighting div.CodeMirror-selected {
+    background: red;
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid #f8f8f8 !important;
+}
+
+.CodeMirror-gutters {
+    background-color: @background;
+    border-right: none;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: #fff;
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #3d3d3d;
+    opacity: .23;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background-color: #ffe69d;
+    color: #242424;
+}
+
+.CodeMirror-matchingbracket {
+  color: #fff !important;
+  background: rgba(255,200,200,0.15);
+}
+
+.CodeMirror-matchingtag {
+    background: rgba(255,255,255,0.15);
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none !important;
+    border-bottom: 1px solid #fff;
+}
+
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+    background-color: @background;
+}
+
+#image-holder {
+    color: @foreground;
+}
